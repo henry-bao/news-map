@@ -18,7 +18,11 @@
     align-items: center;
     z-index: 100;
     opacity: 0.8;
-    transition: width 0.5s ease;
+    transition: width 0.7s ease;
+}
+
+.panel-btn {
+    font-size: 70px;
 }
 
 .map-container {
@@ -40,4 +44,7 @@
 .expended {
     width: 600px;
     opacity: 1;
+    align-items: start;
+    justify-content: start;
+    padding: 30px;
 }
