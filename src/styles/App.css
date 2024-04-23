@@ -8,21 +8,21 @@
 
 .panel {
     display: flex;
-    position: absolute;
     width: 100px;
+    position: absolute;
     height: 100%;
     flex-direction: column;
     background-color: #404040;
     color: #ffffff;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 2;
     opacity: 0.8;
-    transition: width 0.7s ease;
+    transition: width 0.5s ease;
 }
 
 .panel-btn {
-    font-size: 70px;
+    font-size: 50px;
 }
 
 .map-container {
@@ -31,6 +31,7 @@
 
 .marker {
     background-color: #a83832;
+    position: relative;
     color: white;
     padding: 10px;
     text-align: center;
@@ -39,6 +40,7 @@
     font-size: 16px;
     margin: 4px 2px;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .expended {
@@ -47,4 +49,14 @@
     align-items: start;
     justify-content: start;
     padding: 30px;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 2;
 }
