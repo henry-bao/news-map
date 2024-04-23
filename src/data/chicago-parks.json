@@ -4,7 +4,8 @@
       "type": "Feature",
       "properties": {
         "title": "Lincoln Park",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "timestamp": "2019-03-01T00:00:00Z"
       },
       "geometry": {
         "coordinates": [-87.637596, 41.940403],

@@ -1,25 +1,11 @@
 import mapboxgl from 'mapbox-gl';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import geoJson from '../data/chicago-parks.json';
-import Tooltip from './Tooltip';
+import Marker from './Marker';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JvdXBvbmUiLCJhIjoiY2x2Nzd2ZHJtMDc3YjJpcXY5a2V0d2c4MyJ9.87JbNopJfDz9J5qV2VjePQ';
-
-function Marker({ children, feature }) {
-    const [showTooltip, setShowTooltip] = useState(false);
-    const setTooltip = (value) => () => setShowTooltip(value);
-
-    return (
-        <div onMouseLeave={setTooltip(false)}>
-            <button onClick={setTooltip(true)} className="marker">
-                {children}
-            </button>
-            {showTooltip && <Tooltip feature={feature} />}
-        </div>
-    );
-}
 
 function Map() {
     const mapContainerRef = useRef(null);
