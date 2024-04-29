@@ -22,7 +22,14 @@ function MapLegend(props) {
                     <ul className="legend-labels">{legendItems}</ul>
                 </div>
                 <div class="legend-source">
-                    Source: <a href="#link to source">Name of source</a>
+                    Source:{' '}
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://worldpopulationreview.com/country-rankings/democracy-index-by-country"
+                    >
+                        World Population Review
+                    </a>
                 </div>
             </div>
         </>
