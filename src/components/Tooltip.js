@@ -20,6 +20,7 @@ function CustomTooltip(props) {
                 {props.feature.properties.source && (
                     <iframe
                         className="tooltip-source"
+                        loading="lazy"
                         title={props.feature.properties.source}
                         src={props.feature.properties.source}
                         allow="autoplay"

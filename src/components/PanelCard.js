@@ -6,7 +6,7 @@ function PanelCard(props) {
         <>
             <Card className="panel-card">
                 <CardHeader title={props.feature.properties.title} subheader={props.feature.properties.date} />
-                <CardMedia component="iframe" height="200px" src={props.feature.properties.source} />
+                <CardMedia component="iframe" height="200px" loading="lazy" src={props.feature.properties.source} />
             </Card>
         </>
     );
