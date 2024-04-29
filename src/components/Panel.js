@@ -1,37 +1,95 @@
 import React, { useState } from 'react';
 import { Slider, Switch } from '@mui/material';
+import PanelCard from './PanelCard';
 
 function Panel(props) {
-    const [monthSelectorEnabled, setMonthSelectorEnabled] = useState(false);
+    const [monthSelectorDisabled, setMonthSelectorDisabled] = useState(true);
+    const [year, setYear] = useState([2019, 2025]);
+    const [month, setMonth] = useState([1, 2]);
+
+    function onActionChange(value, func) {
+        func(value);
+
+        const newYear = func === setYear ? value : year;
+        const newMonth = func === setMonth ? value : month;
+        const isMonthSelectorEnabled = func === setMonthSelectorDisabled ? !value : !monthSelectorDisabled;
+
+        props.setGeoJson(
+            props.sources
+                .map((feature) => {
+                    const date = new Date(feature.properties.date);
+                    const featureYear = date.getFullYear();
+                    const featureMonth = date.getMonth() + 1;
+
+                    if (featureYear >= newYear[0] && featureYear <= newYear[1]) {
+                        if (isMonthSelectorEnabled) {
+                            if (featureMonth >= newMonth[0] && featureMonth <= newMonth[1]) {
+                                return feature;
+                            }
+                        } else {
+                            return feature;
+                        }
+                    }
+                    return null;
+                })
+                .filter((feature) => feature !== null)
+        );
+    }
 
     return (
         <>
             <div className={`panel ${props.expended ? 'expended' : ''}`}>
                 <button className={'panel-btn'} onClick={() => props.setExpended(!props.expended)}>
-                    {props.expended ? '👈' : '👉'}
+                    {props.expended ? '◀️' : '▶️'}
                 </button>
                 <div className={`panel-content ${props.expended ? '' : 'hide'}`}>
-                    <h1>Year Slider</h1>
-                    <Slider marks defaultValue={2024} step={1} min={2024} max={2030} valueLabelDisplay="auto" />
-
-                    <div className="panel-month-slider">
-                        <h1>Month Slider</h1>
-                        <Switch
-                            checked={monthSelectorEnabled}
-                            onChange={() => setMonthSelectorEnabled(!monthSelectorEnabled)}
-                            color="primary"
+                    <div className="panel-sliders">
+                        <h1>
+                            <strong>Year: </strong>
+                            {year.join(' - ')}
+                        </h1>
+                        <Slider
+                            marks
+                            value={year}
+                            step={1}
+                            min={2019}
+                            max={2025}
+                            onChange={(_, value) => onActionChange(value, setYear)}
+                            valueLabelDisplay="auto"
+                        />
+                        <div className="panel-month-slider">
+                            <h1>
+                                <strong>Month: </strong>
+                                {numberToMonth(month[0])} - {numberToMonth(month[1])}
+                            </h1>
+                            <Switch
+                                checked={!monthSelectorDisabled}
+                                onChange={() => onActionChange(!monthSelectorDisabled, setMonthSelectorDisabled)}
+                                color="primary"
+                            />
+                        </div>
+                        <Slider
+                            marks
+                            value={month}
+                            step={1}
+                            min={1}
+                            max={12}
+                            onChange={(_, value) => onActionChange(value, setMonth)}
+                            valueLabelDisplay="auto"
+                            valueLabelFormat={numberToMonth}
+                            disabled={monthSelectorDisabled}
                         />
                     </div>
-                    <Slider
-                        marks
-                        defaultValue={1}
-                        step={1}
-                        min={1}
-                        max={12}
-                        valueLabelDisplay="auto"
-                        valueLabelFormat={numberToMonth}
-                        disabled={!monthSelectorEnabled}
-                    />
+
+                    <div className="panel-cards">
+                        <h1>
+                            <strong>Number of Events: </strong>
+                            {props.features.length}
+                        </h1>
+                        {props.features.map((feature) => {
+                            return <PanelCard key={feature.properties.source} feature={feature} />;
+                        })}
+                    </div>
                 </div>
             </div>
         </>

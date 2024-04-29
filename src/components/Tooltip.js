@@ -1,15 +1,12 @@
 import { Tooltip } from 'react-tooltip';
 import React from 'react';
 
-function CustomTooltip({ feature, uuid }) {
-    // TODO: check if the feature has a video property
-    feature.properties.video = true;
-
+function CustomTooltip(props) {
     return (
         <Tooltip
-            key={uuid}
+            key={props.uuid}
             className="marker-tooltip"
-            id={`tooltip-${uuid}`}
+            id={`tooltip-${props.uuid}`}
             style={{
                 backgroundColor: 'black',
                 borderRadius: '5px',
@@ -18,13 +15,14 @@ function CustomTooltip({ feature, uuid }) {
             clickable
         >
             <div className="tooltip">
-                <p className="tooltip-title">{feature.properties.title}</p>
-                <p className="tooltip-description">{feature.properties.description}</p>
-                {feature.properties.video && (
+                <p className="tooltip-title">{props.feature.properties.title}</p>
+                <p className="tooltip-date">{props.feature.properties.date}</p>
+                {props.feature.properties.source && (
                     <iframe
-                        className="tooltip-video"
-                        src="https://www.youtube.com/embed/sm757r-pI-4?si=x48uTLNfSXONEYEM"
-                        title="YouTube video player"
+                        className="tooltip-source"
+                        title={props.feature.properties.source}
+                        src={props.feature.properties.source}
+                        allow="autoplay"
                     ></iframe>
                 )}
             </div>

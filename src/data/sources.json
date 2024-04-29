@@ -1,0 +1,197 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "A.I. Robocalls Mimicking Joe Biden targeted at the populations voting in the New Hampshire Primaries",
+                "source": "https://drive.google.com/file/d/1-LrimBBIvkzLVjLwWNrNjg5_C3OL7oOz/preview",
+                "date": "01-22-2024"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-99.9018, 31.9686]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Is Argentina the First A.I. Election?",
+                "source": "https://drive.google.com/file/d/1z0AREUbJm5e1nBYDzy-6Fobz4cQEc54d/preview",
+                "date": "11-15-2023"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-58.3816, -34.6037]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Brazil seeks to curb AI deepfakes as key elections loom",
+                "source": "https://drive.google.com/file/d/1vRiU1HvYGf1iNgwapJg32UFcqW1G5dzm/preview",
+                "date": "03-08-2024"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [47.8919, -15.793889]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Brussels Begins to Mobilise Its Mass Censorship Regime for Upcoming EU Elections",
+                "source": "https://drive.google.com/file/d/1mj_Xi63UBtl3YAepU76XeQKXsb4bQKeD/preview",
+                "date": "04-02-2024"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [4.3572, 50.8476]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "In March 2022, a deepfake video supposedly showing President Zelenskyy surrendering to Russia circulated online.",
+                "source": "https://drive.google.com/file/d/15hcdBl-uFgnjvFsk_6yA8fxIaYj2FiAr/preview",
+                "date": "03-16-2022"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [31.1656, 48.3794]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Venezuelan Government Uses Synthesia AI to Create Fake Newscasters \"Daren\" and \"Noah\" for Pro-Regime Propaganda on Fictitious \"House of News\"",
+                "source": "https://drive.google.com/file/d/1gVJsqhzxwPNlnJIZZk-sSYC5XE68mNG4/preview",
+                "date": "03-03-2023"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-66.5897, 6.4238]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "How China Exploited Taiwan\u2019s Election\u2014and What It Could Do Next",
+                "source": "https://drive.google.com/file/d/1_gBmD0nO_O53DhjEgkLwlwqtJaVQYO1s/preview",
+                "date": "02-01-2024"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [120.9605, 23.6978]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Russia's Internet Research Agency used social media bots and trolls to spread divisive information, promote political discord, and support Donald Trump's presidency bid.",
+                "source": "https://drive.google.com/file/d/1390gxlVcfbMierKiDlpLgyiB5Hefzgw5/preview",
+                "date": "03-01-2019"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.6173, 55.7558]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Vallas campaign condemns deepfake video posted to Twitter",
+                "source": "https://drive.google.com/file/d/1COMlUJodZqtLHD5MuNISDYSb5QL-M0D-/preview",
+                "date": "02-27-2023"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.6298, 41.8781]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Georgia lawmakers are using an AI deepfake video to try to ban political deepfakes",
+                "source": "https://drive.google.com/file/d/1Eab9i8O8ME1A5MCdkulhqJft3LkgQe8G/preview",
+                "date": "03-20-2024"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-82.9071, 32.1574]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Deepfakes for $24 a month: how AI is disrupting Bangladesh\u2019s election (ft.com)",
+                "source": "https://drive.google.com/file/d/1no-n3gWdavOzCs_gZ-CI8dbyfo6qikP-/preview",
+                "date": "12-14-2023"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-90.4152, 23.8041]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "AI-Generated Hoax of Pentagon Explosion Went Viral, Markets Dipped",
+                "source": "https://drive.google.com/file/d/19g2Kjbvp4X-npvfKoijCR4GZz5BRoQ25/preview",
+                "date": "05-22-2023"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-77.0369, 38.9072]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "How AI is resurrecting dead Indian politicians as election looms",
+                "source": "https://drive.google.com/file/d/1Do-G_R2MdY7g5oLjl58NR8E0FlbNEctQ/preview",
+                "date": "02-12-2024"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [77.1025, 28.7041]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Faked AI audio hits Harlem politics",
+                "source": "https://drive.google.com/file/d/1f-nrUTxgjQOJ2MiMCCtn-cuu0BRqluwc/preview",
+                "date": "01-23-2024"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-74.006, 40.7128]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "DeSantis campaign shares apparent AI-generated images of Trump",
+                "source": "https://drive.google.com/file/d/1VG1jKgjD81grvqireL_4VPe-mykzIw_L/preview",
+                "date": "06-08-2023"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [76.9, 38.5072]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "India: Technology Use Shouldn\u2019t Undermine Free, Fair Elections",
+                "source": "https://drive.google.com/file/d/1MEIA928NoMNbv51UBlTBvVZbwDfL3yU5/preview",
+                "date": "04-08-2024"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [77.2, 28.6]
+            }
+        }
+    ]
+}
