@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Slider, Switch } from '@mui/material';
 import PanelCard from './PanelCard';
 
@@ -6,6 +6,17 @@ function Panel(props) {
     const [monthSelectorDisabled, setMonthSelectorDisabled] = useState(true);
     const [year, setYear] = useState([2019, 2025]);
     const [month, setMonth] = useState([1, 2]);
+    const [showPanelContent, setShowPanelContent] = useState(false);
+
+    useEffect(() => {
+        if (props.expended) {
+            setTimeout(() => {
+                setShowPanelContent(true);
+            }, 400);
+        } else {
+            setShowPanelContent(false);
+        }
+    }, [props.expended]);
 
     function onActionChange(value, func) {
         func(value);
@@ -42,7 +53,7 @@ function Panel(props) {
                 <button className={'panel-btn'} onClick={() => props.setExpended(!props.expended)}>
                     {props.expended ? '◀️' : '▶️'}
                 </button>
-                <div className={`panel-content ${props.expended ? '' : 'hide'}`}>
+                <div className={`panel-content ${showPanelContent ? 'show' : ''}`}>
                     <div className="panel-sliders">
                         <h1>
                             <strong>Year: </strong>

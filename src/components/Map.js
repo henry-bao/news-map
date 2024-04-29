@@ -37,40 +37,14 @@ function Map(props) {
                 source: 'democracy-index',
                 layout: {},
                 paint: {
-                    'fill-color': [
-                        'interpolate',
-                        ['linear'],
-                        ['get', 'DemocracyIndex2023'],
-                        0,
-                        '#ffffd9', 
-                        1,
-                        '#edf8c0',
-                        2,
-                        '#d2edb6', 
-                        3,
-                        '#a7ddb8',
-                        4,
-                        '#75c9bd', 
-                        5,
-                        '#48b2c1', 
-                        6,
-                        '#2c95bd',
-                        7,
-                        '#2272b1', 
-                        8,
-                        '#214f9e', 
-                        9,
-                        '#1a3381', 
-                        10,
-                        '#081d58', 
-                    ],
-                    'fill-opacity': 0.50,
+                    'fill-color': ['interpolate', ['linear'], ['get', 'DemocracyIndex2023'], ...props.mapColor],
+                    'fill-opacity': 0.5,
                 },
             });
         });
 
         return () => mapRef.current.remove();
-    }, [props.democracyIndex]);
+    }, [props.democracyIndex, props.mapColor]);
 
     useEffect(() => {
         const map = mapRef.current;
